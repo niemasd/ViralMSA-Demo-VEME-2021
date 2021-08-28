@@ -56,4 +56,5 @@ Once ViralMSA finishes running, you can find the output multiple sequence alignm
 ```
 
 ## Conclusion
-Congratulations! You've just finished aligning almost 20,000 SARS-CoV-2 consensus genome sequences using ViralMSA! If you wish to view the input sequences or the output multiple sequence alignment, you can use a visualization tool such as [Jalview](https://www.jalview.org/).
+Congratulations! You've just finished aligning almost 20,000 SARS-CoV-2 consensus genome sequences using ViralMSA! If you wish to view the input sequences or the output multiple sequence alignment, you can use a visualization tool such as [Jalview](https://www.jalview.org/). You may notice that ViralMSA included the reference genome as the first sequence
+in the output multiple sequence alignment for convenience as well as for context. However, if you wish to omit the reference genome from ViralMSA's output, you can use the `--omit_ref` argument when you run ViralMSA.
