@@ -14,4 +14,10 @@ https://github.com/andersen-lab/HCoV-19-Genomics
 
 Rather than downloading the dataset from the Andersen lab's repository, however, we have merged the consensus sequences into a single file and have provided it in this repository, so you can just download the following file:
 
-TBD
+https://github.com/niemasd/ViralMSA-Demo-VEME-2021/raw/main/andersen_consensus_2021-08-28.fasta.gz
+
+If you're using a command line environment, you can download this file using `wget`:
+
+```bash
+wget https://github.com/niemasd/ViralMSA-Demo-VEME-2021/raw/main/andersen_consensus_2021-08-28.fasta.gz
+```
