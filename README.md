@@ -5,6 +5,7 @@ In this demo, we will run [ViralMSA](https://github.com/niemasd/ViralMSA) on an 
 Before analyzing any data, you must first install ViralMSA and Minimap2:
 
 * **ViralMSA:** https://github.com/niemasd/ViralMSA#installation
+* **BioPython:** https://biopython.org/wiki/Download
 * **Minimap2:** https://github.com/lh3/minimap2#install
 
 ## Step 2: Download Unaligned SARS-CoV-2 Genome Sequence Dataset
@@ -30,3 +31,18 @@ gunzip andersen_consensus_2021-08-28.fasta.gz
 ```
 
 This will decompress our original gzip-compressed file, `andersen_consensus_2021-08-28.fasta.gz`, into a new uncompressed FASTA file, `andersen_consensus_2021-08-28.fasta`. This is the file we will align using ViralMSA.
+
+## Step 4: Align Using ViralMSA
+We can now perform reference-guided multiple sequence alignment using ViralMSA. We will run it as follows (replace `EMAIL_ADDRESS` with your actual email address):
+
+```bash
+ViralMSA.py -e EMAIL_ADDRESS -r SARS-CoV-2 -o viralmsa_output -s andersen_consensus_2021-08-28.fasta
+```
+
+* **`-e EMAIL_ADDRESS`:** Specifies your email address (needed for BioPython to download the reference genome from GenBank)
+* **`-r SARS-CoV-2`:** Specifies the virus of interest so ViralMSA can download the appropriate reference genome
+  * For a full list of virus names, see the keys of this dictionary: https://github.com/niemasd/ViralMSA/blob/master/ViralMSA.py#L31-L49
+  * You can alternatively specify a GenBank accession number, or you can specify the path to a local file
+  * But for this demo, just use `SARS-CoV-2` for the reference genome
+* **`-o viralmsa_output`:** Specifies the output folder to be the folder `viralmsa_output` (which will be created by ViralMSA)
+* **`-s andersen_consensus_2021-08-28.fasta`:** Specifies the input sequences we want to align to be the file `andersen_consensus_2021-08-28.fasta`
