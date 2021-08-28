@@ -47,3 +47,13 @@ ViralMSA.py -e EMAIL_ADDRESS -r SARS-CoV-2 -o viralmsa_output -s andersen_consen
 * **`-o viralmsa_output`:** Specifies the output folder to be the folder `viralmsa_output` (which will be created by ViralMSA)
 * **`-s andersen_consensus_2021-08-28.fasta`:** Specifies the input sequences we want to align to be the file `andersen_consensus_2021-08-28.fasta`
 
+On my 8-core laptop that has a solid-state drive (SSD), ViralMSA took just over 30 seconds to align this dataset. This may take longer on your computer depending on the number of cores as well as the speed of your storage (e.g. HDD or SSD).
+
+Once ViralMSA finishes running, you can find the output multiple sequence alignment in a file named `andersen_consensus_2021-08-28.fasta.aln` within the `viralmsa_output` directory created by ViralMSA. In general, the ViralMSA log will tell you exactly where the output multiple sequence alignment is located, e.g. the following line (should be the last line of the log output):
+
+```
+[2021-08-28 13:12:30] Multiple sequence alignment complete: /home/niema/ViralMSA-Demo-VEME-2021/viralmsa_output/andersen_consensus_2021-08-28.fasta.aln
+```
+
+## Conclusion
+Congratulations! You've just finished aligning almost 20,000 SARS-CoV-2 consensus genome sequences using ViralMSA! If you wish to view the input sequences or the output multiple sequence alignment, you can use a visualization tool such as [Jalview](https://www.jalview.org/).
