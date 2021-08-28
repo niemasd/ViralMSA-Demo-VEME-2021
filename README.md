@@ -21,3 +21,12 @@ If you're using a command line environment, you can download this file using `wg
 ```bash
 wget https://github.com/niemasd/ViralMSA-Demo-VEME-2021/raw/main/andersen_consensus_2021-08-28.fasta.gz
 ```
+
+## Step 3: Decompress the Sequence Dataset
+As you may have noticed, the dataset we have provided is gzip-compressed (hence the `.gz` file extension). We compressed the file so that it would be small enough to fit into a GitHub Repository and so that it would be easier for you to download, but before we can use it with ViralMSA, we need to decompress it. We can do so using `gunzip`:
+
+```bash
+gunzip andersen_consensus_2021-08-28.fasta.gz
+```
+
+This will decompress our original gzip-compressed file, `andersen_consensus_2021-08-28.fasta.gz`, into a new uncompressed FASTA file, `andersen_consensus_2021-08-28.fasta`. This is the file we will align using ViralMSA.
