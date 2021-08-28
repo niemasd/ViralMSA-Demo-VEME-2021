@@ -1,5 +1,5 @@
 # ViralMSA Demo (VEME 2021)
-In this demo, we will run [ViralMSA](https://github.com/niemasd/ViralMSA) on an example SARS-CoV-2 dataset.
+In this demo, we will run [ViralMSA](https://github.com/niemasd/ViralMSA) on an example dataset containing **19,294** SARS-CoV-2 consensus genome sequences.
 
 ## Step 1: Install ViralMSA and Minimap2
 Before analyzing any data, you must first install ViralMSA and Minimap2:
@@ -46,3 +46,4 @@ ViralMSA.py -e EMAIL_ADDRESS -r SARS-CoV-2 -o viralmsa_output -s andersen_consen
   * But for this demo, just use `SARS-CoV-2` for the reference genome
 * **`-o viralmsa_output`:** Specifies the output folder to be the folder `viralmsa_output` (which will be created by ViralMSA)
 * **`-s andersen_consensus_2021-08-28.fasta`:** Specifies the input sequences we want to align to be the file `andersen_consensus_2021-08-28.fasta`
+
